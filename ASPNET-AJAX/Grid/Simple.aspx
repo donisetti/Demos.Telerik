@@ -58,12 +58,12 @@
                         SortExpression="Phone" UniqueName="Phone">
                     </telerik:GridBoundColumn>
                     <telerik:GridTemplateColumn FilterControlAltText="Filter TemplateColumn column"
-                        HeaderText="Templated" UniqueName="TemplateColumn">
+                        HeaderText="* Templated" UniqueName="TemplateColumn">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Phone", "{0}") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Phone", "***{0}***") %>'></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Phone", "* {0}") %>'></asp:Label>
                         </ItemTemplate>
                     </telerik:GridTemplateColumn>
                 </Columns>
